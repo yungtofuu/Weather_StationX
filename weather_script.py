@@ -28,7 +28,8 @@ try:
            pressure = sense.get_pressure()
            pressure = round(pressure, 1)
            print("Pressure:",pressure)
-           sense.show_message("Temperature F" + str(temp) + "Humidity:" + str(humidity) + "Pressure:" + str(pressure), scroll_speed=(0.08), bac$
+           sense.show_message("Temperature F" + str(temp) + "Humidity:" + str(humidity) + "Pressure:" + str(pressure), scroll_speed=(0.08),  back_colour= [0,0,0], text_colour=[0,255,0])
+
            time.sleep(1)
 except KeyboardInterrupt:
       pass
