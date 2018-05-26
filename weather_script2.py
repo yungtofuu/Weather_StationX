@@ -1,3 +1,8 @@
+#!/usr/bin/python
+from sense_hat import SenseHat
+import time
+import sys
+from ISStreamer.Streamer import Streamer
 
 sense = SenseHat()
 logger = Streamer(bucket_name="Sense Hat Sensor Data", access_key="q37KUCDGB9jjsDjxrXiitYz98dqOGqDg")
@@ -13,10 +18,3 @@ try:
            humidity = round(humidity, 1)
            logger.log("Humidity :",humidity)
 
-           pressure = sense.get_pressure()
-           pressure = round(pressure, 1)
-           logger.log("Pressure:",pressure)
-
-           time.sleep(1)
-except KeyboardInterrupt:
-      pass
